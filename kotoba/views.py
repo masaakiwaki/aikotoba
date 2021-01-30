@@ -30,7 +30,7 @@ class AikotobaListView(generic.ListView):
                 Q(kotoba__exact=q_word)
                 )
         else:
-            object_list = Aikotoba.objects.all
+            object_list = Aikotoba.objects.all()
         return object_list
 
 
