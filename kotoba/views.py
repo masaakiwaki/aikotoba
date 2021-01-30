@@ -30,7 +30,9 @@ class AikotobaListView(generic.ListView):
                 Q(kotoba__exact=q_word)
                 )
         else:
-            object_list = Aikotoba.objects.all()
+            object_list = Aikotoba.objects.filter(
+                id = 'a2016c1c823541c683208276f7413d18'
+                )
         return object_list
 
 
