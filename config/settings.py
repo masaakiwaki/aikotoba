@@ -137,3 +137,7 @@ DATABASES['default'].update(db_from_env)
 
 import django_heroku #追加
 django_heroku.settings(locals())
+
+# 暗号化されたhttpsを使うようにする
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
